@@ -1,0 +1,29 @@
+<style type="text/css">
+		#i1 h1{
+			margin-top: 10px;
+			padding-top: 20px;
+		}
+		
+		#d2 img{
+			float: left;
+			height: 300px;
+			width: 250px;
+		} 
+		#d2 pre{
+			padding-left: 280px;
+			padding-top: 40px;
+			font-size: 15px;
+		}
+		.main hr{
+			margin-top: 220px;
+		}
+		#d2 img:hover{
+			border: 2px solid red;
+		}
+		input[type=button]{
+			background-color: yellow;
+			color: red;
+		}
+		
+		
+	</style>

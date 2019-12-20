@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div style="background-color: skyblue;" id="i1">
+	<center><h1 style="padding-top: 20px;">LIST OF MOVIES</h1></center>
+	<hr>
+	</div>
+
+	<div class="main">
+		<ul style="list-style-type: none;">
+		<li><div id="d2">
+			<center><h3 style="color: red">WAR</h3></center>
+			<a href="https://www.imdb.com/title/tt7430722/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/War_official_poster.jpg/220px-War_official_poster.jpg"></a>
+			<pre>An Indian soldier is assigned a mission to eliminate his former mentor, who has gone rogue.
+<b>Director:</b> Siddharth Anand
+<b>Writers:</b> Siddharth Anand (screenplay), Siddharth Anand (story) 
+<b>Stars:</b> Hrithik Roshan, Tiger Shroff, Vaani Kapoor</pre>
+		</div><hr></li>
+
+		<li><div style="clear: both;" id="d2">
+			<center><h3 style="color: red">SUPER 30</h3></center>
+			<a href="https://www.imdb.com/title/tt7485048/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Super_30_The_Film.jpg/220px-Super_30_The_Film.jpg"></a>
+			<pre>Based on life of Patna-based mathematician Anand Kumar who runs the famed Super 30 program for IIT aspirants in Patna.
+<b>Director:</b> Vikas Bahl
+<b>Writer:</b> Sanjeev Dutta
+<b>Stars:</b> Hrithik Roshan, Mrunal Thakur, Nandish Singh</pre>
+		</div><hr></li>
+
+		,<li><div style="clear: both;" id="d2">
+			<center><h3 style="color: red">KAABIL</h3></center>
+			<a href="https://www.imdb.com/title/tt5460276/" target="_blank"><img src="https://i.pinimg.com/originals/c6/85/63/c685631b5af75e3ee0969189da0bd0f1.jpg"></a>
+			<pre>A blind man seeks revenge against a corrupt politician and his brother after his wife is raped and killed.
+<b>Director:</b> Sanjay Gupta
+<b>Writers:</b> Sanjay Masoomm (dialogue) (as Sanjay Masoom), Vijay Kumar Mishra
+<b>Stars:</b> Hrithik Roshan, Yami Gautam, Ronit Roy</pre>
+		</div><hr></li>
+
+		<li><div style="clear: both;" id="d2">
+			<center><h3 style="color: red">KRRISH</h3></center>
+			<a href="https://www.imdb.com/title/tt0432637/" target="_blank"><img src="https://wallpapercave.com/wp/wp4127803.jpg"></a>
+			<pre>Krishna is forced by circumstances to use his superpowers and become a masked superhero, Krrish, before getting drawn
+towards his lost legacy.
+<b>Director:</b> Rakesh Roshan
+<b>Writers:</b> Robin Bhatt (screenplay), Sachin Bhowmick (screenplay)
+<b>Stars:</b> Hrithik Roshan, Priyanka Chopra, Rekha</pre>
+		</div><hr></li>
+
+		<li><div style="clear: both;" id="d2">
+			<center><h3 style="color: red">ZINDAGI NA MILEGI DOBARA</h3></center>
+			<a href="https://www.imdb.com/title/tt1562872/" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0747/3829/products/mNS0731_1024x1024.jpg?v=1571444657"></a>
+			<pre>Three friends decide to turn their fantasy vacation into reality after one of their friends gets engaged.
+<b>Director:</b> Zoya Akhtar
+<b>Writers:</b> Farhan Akhtar (dialogue), Reema Kagti (story)
+<b>Stars:</b> Hrithik Roshan, Farhan Akhtar, Abhay Deol</pre>
+		</div><hr></li>
+
+		<li><div style="clear: both;" id="d2">
+			<center><h3 style="color: red">DHOOM 2</h3></center>
+			<a href="https://www.imdb.com/title/tt0441048/" target="_blank"><img src="https://images-na.ssl-images-amazon.com/images/I/51eoN%2B-NlxL.jpg"></a>
+			<pre>Mr A, a fearless thief, steals valuable artefacts and teams up with the girl he is attracted to but who cannot be trusted. 
+Close on their heels are three police officers trying to apprehend them.
+<b>Director:</b> Sanjay Gadhvi
+<b>Writers:</b> Vijay Krishna Acharya (screenplay), Vijay Krishna Acharya (dialogue)
+<b>Stars:</b> Hrithik Roshan, Abhishek Bachchan, Aishwarya Rai Bachchan</pre>
+		</div><hr></li>
+
+		<li><div style="clear: both;" id="d2">
+			<center><h3 style="color: red">LAKSHYA</h3></center>
+			<a href="https://www.imdb.com/title/tt0323013/" target="_blank"><img src="https://cdn.cinematerial.com/p/500x/euung4oq/lakshya-indian-movie-poster.jpg?v=1456012076"></a>
+			<pre>An aimless, jobless, irresponsible grown man joins the army and matures into a battlefield hero.
+<b>Director:</b> Farhan Akhtar
+<b>Writers:</b> Javed Akhtar (dialogue), Javed Akhtar (screenplay)
+<b>Stars:</b> Hrithik Roshan, Preity Zinta, Amitabh Bachchan</pre>
+		</div><hr></li>
+		</ul>
+	</div>
+
+
+	<div id="app">
+		
+			<center><h3 style="color: red" v-for="user in users">{{user.name}}</h3></center>
+		<hr>
+		<form v-on:submit.prevent="addNewUser">
+			<input placeholder="Movie name" v-model="user.name" /><br>			
+			<button type="submit">ADD</button>
+		</form>
+		
+	</div>
+	<input type="file" accept="image/*" id="file-input" onclick="fun()">
+
+	<script>
+		function fun(){
+		const fileInput = document.getElementById('file-input');
+		fileInput.onClick('change',(e) => (e.target.files));
+}
+		var myapp = new Vue({
+			el: '#app',
+			data: {
+				users:[{name:""}],
+				user: {name:""}
+			},
+			methods: {
+				addNewUser() {
+					this.users.push({name: this.user.name});
+					name: this.user.name = '';			
+				}
+			}
+		});
+	</script>
+
+
+</body>
+</html>
